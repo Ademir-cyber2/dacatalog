@@ -24,14 +24,14 @@
 
 .home-content-container h1 {
     width: 260px;
-    color: #9E9E9E;
-    font-size: 1rem;
+    font-size: 1em;
     margin-bottom: 15px;
 }
 
 .home-content-container p {
     width: 260px;
-    font-size: 1rem;
+    font-size: 0.6em;
+    color: #9E9E9E;
     margin-bottom: 30px;
 }
 

@@ -2,7 +2,7 @@ import { ReactComponent as MainImage } from 'assets/images/main-image.svg';
 import ButtonIcon from 'components/ButtonIcon';
 import Navbar from "components/Navbar";
 
-import './styles.css';
+import "./styles.css";
 
 const Home = () => {
   return (
