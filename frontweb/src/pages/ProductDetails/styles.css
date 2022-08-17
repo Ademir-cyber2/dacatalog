@@ -1,19 +1,16 @@
 .product-details-container {
     padding: 10px;
     font-size: 24px;
-    border-radius: 1px solid rgb(200, 6, 6);
 }
 
 .product-details-card {
     padding: 10px;
-    border-radius: 1px solid red;
 }
 
 .goback-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    border-radius: 1px solid red;
 }
 
 .goback-container h2 {
