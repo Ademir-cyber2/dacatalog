@@ -8,12 +8,14 @@ import { SpringPage } from "pages/types/vendor/spring";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BASE_URL } from "util/requests";
+import CardLoader from "./CardLoader";
 
 import './styles.css';
 
 const Catalog = () => {
 
     const [page, setPage] = useState<SpringPage<Product>>();
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
 
@@ -26,8 +28,11 @@ const Catalog = () => {
             },
         }
 
+        setIsLoading(true);
         axios(params).then(response => {
             setPage(response.data);
+        }).finally(() => {
+            setIsLoading(false);
         });
 
     }, []);
@@ -40,13 +45,14 @@ const Catalog = () => {
             </div>
             <div className="row">
 
-                {page?.content.map((product) => (
-                    <div className="col-sm-6 col-lg-4 col-xl-3" key={product.id}>
-                        <Link to="/product/1">
-                            <ProductCard product={product} />
-                        </Link>
-                    </div>
-                ))}
+                {isLoading ? <CardLoader /> : (
+                    page?.content.map((product) => (
+                        <div className="col-sm-6 col-lg-4 col-xl-3" key={product.id}>
+                            <Link to="/product/1">
+                                <ProductCard product={product} />
+                            </Link>
+                        </div>
+                    )))}
             </div>
 
             <div className="row">
