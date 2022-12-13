@@ -1,4 +1,6 @@
 .login-card {
+    width: 400px;
+    height: 500px;
     padding: 20px;
     font-size: 16px;
 }
@@ -10,7 +12,7 @@
     letter-spacing: -0.015em;
     color: #263238;
     text-transform: uppercase;
-    margin-top: 70px;
+    margin-top: 10px;
     margin-bottom: 50px;
 }
 
@@ -19,7 +21,7 @@
     letter-spacing: -0.015em;
     color: #407bff;
     display: block;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 }
 
 .login-link-register {
