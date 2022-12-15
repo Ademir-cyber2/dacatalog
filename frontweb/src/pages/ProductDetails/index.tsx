@@ -22,13 +22,14 @@ const ProductDetails = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        axios.get(`${BASE_URL}/products/${productId}`).then(response => {
-            setProduct(response.data);
-        }).finally(() => {
-            setIsLoading(false);
-        }
+        axios
+            .get(`${BASE_URL}/products/${productId}`).then(response => {
+                setProduct(response.data);
+            }).finally(() => {
+                setIsLoading(false);
+            }
 
-        );
+            );
     }, [productId]);
 
     return (
